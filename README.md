@@ -13,6 +13,7 @@ The purpose of this workshop was to introduce attendees to reproducible research
 Please clone (aka download) the Github repository, save files somewhere useful (i.e. desktop for now). 
 
 HTML slides can be viewed here: [Slides](./ReproducibleResearchSeminar.html)
+
 PDF slides can be viewed here: [Slides](./ReproducibleResearchSeminar.pdf)
 
 You can choose to click on the HTML or PDF file links to follow on with todays workshop. 
