@@ -497,9 +497,7 @@ Code results can be inserted directly into the text of a .Rmd file by enclosing 
 
 * Open a new RMarkdown document, via `File` -> `New File` -> `RMarkdown`. Name it however you like and select `HTML` for now. 
 
-```{r, echo=FALSE, out.width='30%', fig.align='center', fig.cap=''}
-knitr::include_graphics('./images/NameCreateRMarkdown.jpg')
-```
+![](images/NameCreateRMarkdown.jpg)
 
 ---
 
@@ -572,7 +570,7 @@ knitr::include_graphics('https://cdn2.iconfinder.com/data/icons/color-svg-vector
 
 * Another workshop on reproducible research, with links to examples of the different outputs available: [http://applied-r.com/project-reporting-template/]
 
-* Remember, many R-users deploy their code online, which makes learning new code easier (i.e. you can look at the final product and code tandemly to figure out the options needed for your document). [**R-Ladies Global**](rladies.org) GitHub repository can be found here, and you can download other respositories as a reference during your learning journey: [https://github.com/rladies]
+* Remember, many R-users deploy their code online, which makes learning new code easier (i.e. you can look at the final product and code tandemly to figure out the options needed for your document). [**R-Ladies Global**](https://rladies.org) GitHub repository can be found here, and you can download other respositories as a reference during your learning journey: [https://github.com/rladies]
 
 ---
 
@@ -608,11 +606,11 @@ Alyce Russell
 
 Email: a.russell@ecu.edu.au
 
-Twitter: [**@nerdrusty**](www.twitter.com/nerdrusty)
+Twitter: [**@nerdrusty**](https://www.twitter.com/nerdrusty)
 
 <br/>
 
-R-Ladies Perth: Follow us on our [**Meetup Page**](www.meetup.com/rladies-perth/) or [**Twitter @RLadiesPerth**](www.twitter.com/RLadiesPerth)
+R-Ladies Perth: Follow us on our [**Meetup Page**](https://www.meetup.com/rladies-perth/) or [**Twitter @RLadiesPerth**](https://www.twitter.com/RLadiesPerth)
 
 <br/>
 
