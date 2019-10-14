@@ -256,7 +256,7 @@ knitr::include_graphics('./images/folders.png')
 
 ## Let's talk about data structure, baby!
 
-Data structure refers to the way data is organised and manipulated. It seeks to find ways to make data access more efficient. 
+Data structure refers to the way data is organised, manipulated and stored. It seeks to find ways to make data access more efficient. 
 
 <br/>
 
@@ -388,11 +388,11 @@ knitr::include_graphics('./images/tidyverse.png')
 
 ## What is this wizardry?!
 
-The rest of this presentation assumes some knowledge in R. If you are a beginner, however, there will be links to useful resources along the way. 
+The rest of this presentation assumes some knowledge in R. If you are a beginner, however, there will be clickable links to useful resources along the way. 
 
 <br/>
 
-Check out [https://tidyverse.org] for access to the **R for Data Science** eBook as well as working through RStudio workshops, including [https://rmarkdown.rstudio.com] for more on RMarkdown functions.
+Check out [https://tidyverse.org] for access to the **R for Data Science** eBook (an excellent first reference) as well as working through RStudio workshops, including [https://rmarkdown.rstudio.com] and [https://bookdown.org/yihui/bookdown/] for more on RMarkdown functions.
 
 <br/>
 
@@ -406,7 +406,7 @@ search engine. Download the latest version for your computers capacity.
 
 ## What is RMarkdown?
 
-R Markdown documents are **fully reproducible**. You code into the `RMarkdown` document using RStudio, then use `knitr` to weave together narrative text, code and outputs to produce elegantly formatted reports (in Word, PDF, HTML, and it even has formats to produce these slides!!!).
+R Markdown documents are **fully reproducible**. You code into the `RMarkdown` document using RStudio, then use `knitr` to weave the narrative text, code chunks and outputs together to produce elegantly formatted reports (in Word, PDF, HTML, and it even has formats to produce these slides!!!).
 
 ```{r, echo=FALSE, out.width='30%', fig.align='center'}
 knitr::include_graphics('http://applied-r.com/wp-content/uploads/2019/01/rmarkdown_workflow.png')
@@ -420,7 +420,7 @@ Simple answer is, you can. However, writing in the console or a basic script can
 
 <br/>
 
-RMarkdown files are fully executable so you can be sure there are no mistakes once the file is weaved together (it sends error messages to let you know where issues are within the document). 
+RMarkdown files are fully executable so you can be sure there are no mistakes once the file is weaved together (it even sends error messages to let you know where issues are within the document). 
 
 <br/>
 
@@ -497,7 +497,7 @@ Code results can be inserted directly into the text of a .Rmd file by enclosing 
 
 * Open a new RMarkdown document, via `File` -> `New File` -> `RMarkdown`. Name it however you like and select `HTML` for now. 
 
-```{r, echo=FALSE, out.width='40%', fig.align='center', fig.cap=''}
+```{r, echo=FALSE, out.width='30%', fig.align='center', fig.cap=''}
 knitr::include_graphics('./images/NameCreateRMarkdown.jpg')
 ```
 
@@ -507,19 +507,16 @@ knitr::include_graphics('./images/NameCreateRMarkdown.jpg')
 
 Add images to text chuck using:
 
-`![](img/my_image.png)`
+`![](image/my_image.png)`
 
-A caption can go within the [ ].
-
-It is best to store these images within a separate `image` subdirectory in the .Rmd file directory (i.e. where you set up the RProject).
+A caption can go within the [ ]. It is best to store these images within a separate `image` subdirectory in the .Rmd file directory (i.e. where you set up the RProject).
 
 You can also use this format in a code chunk:
 ```{r, out.width='50%', fig.align='center', echo=TRUE}
 knitr::include_graphics('./images/RLadiesLogo.png')
 ```
 
-<br/>
-
+--
 **FUN FACT: you can insert hyperlinks into your document using `[](webaddress.com)`. **
 
 ---
@@ -548,7 +545,7 @@ Cell 3 | Cell 4
 
 ## Debugging tip before we begin
 
-* **Line number in error message -** note that this will refer to the beginning of the R chunk, hence shorter R chunks make debugging easier
+* **Line number in error message -** note that this will refer to the beginning of the code chunk, hence shorter code chunks make debugging easier, as well as make them clearly visible in your document. 
 
 <br/>
 
@@ -565,7 +562,7 @@ knitr::include_graphics('https://cdn2.iconfinder.com/data/icons/color-svg-vector
 
 <br/>
 
-* I workshop I gave earlier in the year regarding learning resources in R: [https://youtu.be/GWbgDYRaPr8]
+* A workshop I gave earlier in the year summarising a lot of the learning resources in R: [https://youtu.be/GWbgDYRaPr8]
 
 * A website deployment introducing reproducible research: [http://ropensci.github.io/reproducibility-guide/]
 
@@ -575,29 +572,31 @@ knitr::include_graphics('https://cdn2.iconfinder.com/data/icons/color-svg-vector
 
 * Another workshop on reproducible research, with links to examples of the different outputs available: [http://applied-r.com/project-reporting-template/]
 
+* Remember, many R-users deploy their code online, which makes learning new code easier (i.e. you can look at the final product and code tandemly to figure out the options needed for your document). [**R-Ladies Global**](rladies.org) GitHub repository can be found here, and you can download other respositories as a reference during your learning journey: [https://github.com/rladies]
+
 ---
 
-## Let's do this!!!
+## Let's do this!!
 
 1. Create a file directory for your RMarkdown project.
 
-2. Open RStudio, create new project (asign to existing directory just created), create new RMarkdown. 
+2. Open RStudio, create new project (asign to existing directory just created), create new RMarkdown `HTML` file. 
 
-3. Clone [my GitHub respository](https://github.com/AlyceRussell/ReproducibleResearchOct2019). Save the `data` subdirectory, to your new data directory.
+3. Clone [**my GitHub repository**](https://github.com/AlyceRussell/ReproducibleResearchOct2019). Save the `data` subdirectory, to your new data directory. 
 
-4. Edit your RMarkdown document to include a code chunk to 'load dependencies (i.e. `library(tidyverse)`)'.
+4. Edit your RMarkdown document to include a code chunk to load dependencies (i.e. packages tidyverse and readxl).
 
-5. Next 'read in data from the data subdirectory using [**readxl**](https://readxl.tidyverse.org/)', but include `sheet 1` as the main data, and then have `sheet 2` and `sheet 3` loaded in separately. The latter 2 contain value labels. Use `?readxl` to explore function options).
+5. Next read in data from the data subdirectory using [**readxl**](https://readxl.tidyverse.org/), but include `sheet 1` as the main data, and then have `sheet 2` and `sheet 3` loaded in separately. The latter 2 contain value labels. 
 
-6. Describe your dataset using the `str(x)`, `head(x)`, `names(x)` commands (or similar... note: replace `x` with whatever you called your main dataset).
+6. Explore your dataset using the `str(x)`, `head(x)`, `names(x)` commands (or similar... note: replace `x` with whatever you called your main dataset).
 
 7. Label the column `plot_id` using the values loaded in from `sheet 2`. Some transformations may be required. 
 
 8. Label the column `species_id` within your main dataset using the values loaded in from `sheet 3`. NOTE: you need to merge the info first for `genus` and `species` then label. Append the `sheet 3` column called `taxa` as its own new column.
 
-9. Have a look at [**dplyr**](https://dplyr.tidyverse.org/) to see if you can perform any basic manipulations. Maybe counts of species by plot, or weight by species, etc.
+9. Have a look at [**dplyr**](https://dplyr.tidyverse.org/) to see if you can perform any basic manipulations. Maybe counts of species by plot id, or weight by species, etc.
 
-10. Have a look at [**ggplot2**](https://ggplot2.tidyverse.org/) and get started on plotting. Also, you can check out my previous workshop here: [http://rpubs.com/r-ladiesperth/datavisualisationbasics]
+10. Have a look at [**ggplot2**](https://ggplot2.tidyverse.org/) and explore plotting. Also, you can check out my previous workshop here: [http://rpubs.com/r-ladiesperth/datavisualisationbasics]
 
 ---
 
@@ -609,12 +608,12 @@ Alyce Russell
 
 Email: a.russell@ecu.edu.au
 
-Twitter: [**@nerdyrusty**](www.twitter.com/nerdrusty)
+Twitter: [**@nerdrusty**](www.twitter.com/nerdrusty)
 
 <br/>
 
-R-Ladies Perth: Follow us on [**Meetup**](www.meetup.com/rladies-perth/) or [**Twitter**](www.twitter.com/RLadiesPerth)
+R-Ladies Perth: Follow us on our [**Meetup Page**](www.meetup.com/rladies-perth/) or [**Twitter @RLadiesPerth**](www.twitter.com/RLadiesPerth)
 
 <br/>
 
-Slides created via the R packages [**xaringan**](https://github.com/yihui/xaringan), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+These slides were created via the R packages [**xaringan**](https://github.com/yihui/xaringan), [**knitr**](http://yihui.name/knitr), and [**R Markdown**](https://rmarkdown.rstudio.com), as well as learning from the array of uploads on the [**RLadies Global GitHub Repository**](https://github.com/rladies). Practise data modified from [**Data Carpentries**](https://datacarpentry.org/lessons/#ecology-workshop).
