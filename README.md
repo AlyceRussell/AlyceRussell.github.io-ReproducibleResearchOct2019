@@ -1,7 +1,9 @@
-Title: [Reproducible Research and the Wonders of RMarkdown]
+title: "Reproducible Research and the Wonders of RMarkdown"
 
-By Alyce Russell (www.twitter.com/nerdrusty) 
-14th October 2019
+author: "Alyce Russell (www.twitter.com/nerdrusty)"
+
+date: "14th October 2019"
+
 
 Description: The purpose of this workshop was to introduce attendees to reproducible research concepts and the ways in which RMarkdown can meet the needs of effective documentation. 
 
